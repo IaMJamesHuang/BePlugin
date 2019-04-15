@@ -1,0 +1,77 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kt.james.beplugincore">
+
+    <application>
+        <provider
+            android:process=":plugin"
+            android:authorities="${applicationId}.manager"
+            android:name=".manager.PluginManagerProvider" />
+
+        <activity
+            android:launchMode="standard"
+            android:name="${applicationId}.stub.StandardPluginActivity0"
+            android:exported="true"
+            android:process=":plugin">
+
+            <intent-filter>
+                <action android:name="${applicationId}.STUB_DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="${applicationId}.stub.StandardPluginActivity1"
+            android:exported="true"
+            android:launchMode="standard"
+            android:process=":plugin">
+
+            <intent-filter>
+                <action android:name="${applicationId}.STUB_DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="${applicationId}.stub.StandardPluginActivity2"
+            android:exported="true"
+            android:launchMode="standard"
+            android:process=":plugin">
+
+            <intent-filter>
+                <action android:name="${applicationId}.STUB_DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="${applicationId}.stub.StandardPluginActivity3"
+            android:exported="true"
+            android:launchMode="standard"
+            android:process=":plugin">
+
+            <intent-filter>
+                <action android:name="${applicationId}.STUB_DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="${applicationId}.stub.StandardPluginActivity4"
+            android:exported="true"
+            android:launchMode="standard"
+            android:process=":plugin">
+
+            <intent-filter>
+                <action android:name="${applicationId}.STUB_DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
