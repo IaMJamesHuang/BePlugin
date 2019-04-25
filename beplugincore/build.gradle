@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 28
@@ -31,4 +32,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+uploadArchives {
+    repositories.mavenDeployer{
+        // 配置本地仓库路径，项目根目录下的repository目录中
+        repository(url: uri('D:\\local_android_maven'))
+        pom.groupId = "com.kt.james"// 唯一标识（通常为模块包名，也可以任意）
+        pom.artifactId = "beplugin" // 项目名称（通常为类库模块名称，也可以任意）
+        pom.version = "1.0.0" // 版本号
+    }
 }
