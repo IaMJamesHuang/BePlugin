@@ -19,6 +19,7 @@ import com.kt.james.beplugincore.PluginLoader;
 import com.kt.james.beplugincore.android.HackInstrumentation;
 import com.kt.james.beplugincore.content.PluginInfo;
 import com.kt.james.beplugincore.manager.PluginManagerProviderClient;
+import com.kt.james.beplugincore.util.LogUtil;
 import com.kt.james.beplugincore.util.ProcessUtil;
 
 import java.util.Iterator;

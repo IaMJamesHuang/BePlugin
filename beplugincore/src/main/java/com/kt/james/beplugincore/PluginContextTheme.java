@@ -113,9 +113,15 @@ public class PluginContextTheme extends PluginBaseContextWrapper {
         return BePluginGlobal.getHostApplication().getPackageName();
     }
 
+    //这里如果返回插件本身的application，在进行某些跨进程调用的时候
+    //会使用这里获取的Application实例获取包名
+    //通过Parcel传递数据会使用包名验证，如果不是和当前进程同一个包名会打印出 java.lang.SecurityException
+    //但是Parcel并不会抛出异常，只是会打印出堆栈信息
+    //见Parcel.readException
     @Override
     public Context getApplicationContext() {
-        return mPluginApplication;
+//        return mPluginApplication;
+        return BePluginGlobal.getHostApplication().getApplicationContext();
     }
 
     @Override
